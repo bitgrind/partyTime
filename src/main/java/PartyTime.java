@@ -11,6 +11,7 @@ public class PartyTime {
   private String    mFood = "";
   private String    mDrink = "";
   private String    mEntertainment = "";
+  private String    mDiscount = "";
 
   //SETTERS
   public String setPartyTitle(String title){
@@ -38,6 +39,11 @@ public class PartyTime {
     return mEntertainment;
   }
 
+  public String setPartyDiscount(String discountType){
+    mDiscount = discountType;
+    return mDiscount;
+  }
+
   //GETTERS
   public String getPartyTitle(){
     return mTitle;
@@ -57,5 +63,9 @@ public class PartyTime {
 
   public String getPartyEntertainment(){
     return mEntertainment;
+  }
+
+  public String getPartyDiscount(){
+    return mDiscount;
   }
 }
