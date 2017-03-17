@@ -18,6 +18,7 @@ public class PartyTime {
   public Integer partyCost() {
     Integer cost = 0;
     Integer foodMultiplier = 0;
+    Integer drinkMultiplier = 0;
 
     if(mFood != "") {
       //setting foodMultiplier to type of Entree
@@ -30,11 +31,22 @@ public class PartyTime {
       }
     }
 
+    if(mDrink != "") {
+      //setting foodMultiplier to type of Entree
+      if(mDrink.equals("twoDrinks")){
+        drinkMultiplier = 5;
+      } else if (mDrink.equals("fourDrinks")) {
+        drinkMultiplier = 15;
+      } else if (mDrink.equals("openBar")) {
+        drinkMultiplier = 30;
+      }
+    }
+
     if(mGuests > 0){
       for(int i = 0; i < mGuests; i++){
         //5 dollars for each guest this is starting price
         //foodMultiplier is how much additional the food will cost per guest
-        cost += 5 + (foodMultiplier);
+        cost += 5 + foodMultiplier + drinkMultiplier;
       }
     }
 
