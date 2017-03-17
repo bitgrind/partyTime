@@ -59,4 +59,18 @@ public class PartyTimeTest {
     assertEquals(expectedWord, testParty.getPartyDrink());
   }
 
+  @Test
+  public void setPartyEntertainment_TypeOfEntertainment_GuestEntertainment(){
+    PartyTime testParty = new PartyTime();
+    String expectedWord = "Band";
+    assertEquals(expectedWord, testParty.setPartyEntertainment("Band"));
+  }
+
+  @Test
+  public void getPartyEntertainment_TypeOfEntertainment_GuestEntertainment(){
+    PartyTime testParty = new PartyTime();
+    String expectedWord = "";
+    assertEquals(expectedWord, testParty.getPartyEntertainment());
+  }
+
 }

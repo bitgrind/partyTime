@@ -10,6 +10,7 @@ public class PartyTime {
   private int       mGuests = 0;
   private String    mFood = "";
   private String    mDrink = "";
+  private String    mEntertainment = "";
 
   //SETTERS
   public String setPartyTitle(String title){
@@ -32,6 +33,11 @@ public class PartyTime {
     return mDrink;
   }
 
+  public String setPartyEntertainment(String entertainmentType){
+    mEntertainment = entertainmentType;
+    return mEntertainment;
+  }
+
   //GETTERS
   public String getPartyTitle(){
     return mTitle;
@@ -47,5 +53,9 @@ public class PartyTime {
 
   public String getPartyDrink(){
     return mDrink;
+  }
+
+  public String getPartyEntertainment(){
+    return mEntertainment;
   }
 }
