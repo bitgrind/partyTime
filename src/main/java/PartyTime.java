@@ -6,12 +6,41 @@ import java.util.Random;
 public class PartyTime {
 
   //mVaribles
-  private String    mTitle = "";
-  private int       mGuests = 0;
+  private String    mTitle = "PartyTest";
+  private Integer   mCost = 0;
+  private Integer   mGuests = 5;
   private String    mFood = "";
   private String    mDrink = "";
   private String    mEntertainment = "";
   private String    mDiscount = "";
+
+  //Methods
+  public Integer partyCost() {
+    Integer cost = 0;
+    Integer foodMultiplier = 0;
+
+    if(mFood != "") {
+      //setting foodMultiplier to type of Entree
+      if(mFood.equals("fingerfood")){
+        foodMultiplier = 5;
+      } else if (mFood.equals("oneEntree")) {
+        foodMultiplier = 15;
+      } else if (mFood.equals("fullEntree")) {
+        foodMultiplier = 30;
+      }
+    }
+
+    if(mGuests > 0){
+      for(int i = 0; i < mGuests; i++){
+        //5 dollars for each guest this is starting price
+        //foodMultiplier is how much additional the food will cost per guest
+        cost += 5 + (foodMultiplier);
+      }
+    }
+
+    mCost = cost;
+    return mCost;
+  }
 
   //SETTERS
   public String setPartyTitle(String title){

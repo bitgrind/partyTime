@@ -13,7 +13,7 @@ public class PartyTimeTest {
   @Test
   public void getPartyTitle_PartyName_Party(){
     PartyTime testParty = new PartyTime();
-    String expectedWord = "";
+    String expectedWord = "PartyTest";
     assertEquals(expectedWord, testParty.getPartyTitle());
   }
 
@@ -27,7 +27,7 @@ public class PartyTimeTest {
   @Test
   public void getPartyGuests_NumberofGuests_GuestNumber(){
     PartyTime testParty = new PartyTime();
-    int expectedWord = 0;
+    int expectedWord = 5;
     assertEquals(expectedWord, testParty.getPartyGuests());
   }
 
@@ -85,6 +85,13 @@ public class PartyTimeTest {
     PartyTime testParty = new PartyTime();
     String expectedWord = "";
     assertEquals(expectedWord, testParty.getPartyDiscount());
+  }
+
+  @Test
+  public void PartyCost_Cost_Price(){
+    PartyTime testParty = new PartyTime();
+    Integer expectedWord = 25;
+    assertEquals(expectedWord, testParty.partyCost());
   }
 
 }
