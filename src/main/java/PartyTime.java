@@ -7,7 +7,7 @@ public class PartyTime {
 
   //mVaribles
   private String    mTitle = "PartyTest";
-  private Double    mCost = 0.0;
+  private Double    mCost = 0.00;
   private Integer   mGuests = 0;
   private String    mFood = "";
   private String    mDrink = "";
@@ -16,17 +16,18 @@ public class PartyTime {
 
   //Methods
   public Double partyCost() {
-    Double cost = 0.0;
+    Double cost = 0.00;
     Double foodMultiplier = 0.0;
     Double drinkMultiplier = 0.0;
 
     if(mFood != "") {
+      mFood.toLowerCase();
       //setting foodMultiplier to type of Entree
-      if(mFood.equals("fingerfood")){
+      if(mFood.equals("finger food")){
         foodMultiplier = 5.0;
-      } else if (mFood.equals("oneEntree")) {
+      } else if (mFood.equals("one entree")) {
         foodMultiplier = 15.0;
-      } else if (mFood.equals("fullEntree")) {
+      } else if (mFood.equals("full entree")) {
         foodMultiplier = 30.0;
       } else {
         foodMultiplier = 0.0;
@@ -34,12 +35,13 @@ public class PartyTime {
     }
 
     if(mDrink != "") {
+      mDrink.toLowerCase();
       //setting foodMultiplier to type of Entree
-      if(mDrink.equals("twoDrinks")){
+      if(mDrink.equals("two")){
         drinkMultiplier = 5.0;
-      } else if (mDrink.equals("fourDrinks")) {
+      } else if (mDrink.equals("four")) {
         drinkMultiplier = 15.0;
-      } else if (mDrink.equals("openBar")) {
+      } else if (mDrink.equals("full bar")) {
         drinkMultiplier = 30.0;
       } else {
         drinkMultiplier = 0.0;
@@ -47,12 +49,13 @@ public class PartyTime {
     }
 
     if(mEntertainment != "") {
+      mEntertainment.toLowerCase();
       //setting foodMultiplier to type of Entree
       if(mEntertainment.equals("magician")){
         cost += 50;
       } else if (mEntertainment.equals("dj")) {
         cost += 200;
-      } else if (mEntertainment.equals("fullBand")) {
+      } else if (mEntertainment.equals("full band")) {
         cost += 500;
       } else {
         cost += 0;
