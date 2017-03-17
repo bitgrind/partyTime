@@ -8,7 +8,7 @@ public class PartyTime {
   //mVaribles
   private String    mTitle = "PartyTest";
   private Double    mCost = 0.0;
-  private Double   mGuests = 0.0;
+  private Integer   mGuests = 0;
   private String    mFood = "";
   private String    mDrink = "";
   private String    mEntertainment = "";
@@ -96,8 +96,8 @@ public class PartyTime {
     return mTitle;
   }
 
-  public Double setPartyGuests(Double guests){
-    mGuests = guests;
+  public Integer setPartyGuests(String guests){
+    mGuests = mGuests.parseInt(guests);
     return mGuests;
   }
 
@@ -126,7 +126,7 @@ public class PartyTime {
     return mTitle;
   }
 
-  public Double getPartyGuests(){
+  public Integer getPartyGuests(){
     return mGuests;
   }
 

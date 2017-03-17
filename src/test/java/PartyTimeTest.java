@@ -20,14 +20,14 @@ public class PartyTimeTest {
   @Test
   public void setPartyGuests_NumberofGuests_GuestNumber(){
     PartyTime testParty = new PartyTime();
-    Double expectedWord = 30.0;
-    assertEquals(expectedWord, testParty.setPartyGuests(30.0));
+    Integer expectedWord = 30;
+    assertEquals(expectedWord, testParty.setPartyGuests("30"));
   }
 
   @Test
   public void getPartyGuests_NumberofGuests_GuestNumber(){
     PartyTime testParty = new PartyTime();
-    Double expectedWord = 0.0;
+    Integer expectedWord = 0;
     assertEquals(expectedWord, testParty.getPartyGuests());
   }
 
