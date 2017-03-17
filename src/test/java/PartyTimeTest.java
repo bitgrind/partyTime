@@ -45,4 +45,18 @@ public class PartyTimeTest {
     assertEquals(expectedWord, testParty.getPartyFood());
   }
 
+  @Test
+  public void setPartyDrink_TypeOfDrink_GuestDrink(){
+    PartyTime testParty = new PartyTime();
+    String expectedWord = "Purple Drank";
+    assertEquals(expectedWord, testParty.setPartyDrink("Purple Drank"));
+  }
+
+  @Test
+  public void getPartyDrink_TypeOfDrink_GuestDrink(){
+    PartyTime testParty = new PartyTime();
+    String expectedWord = "";
+    assertEquals(expectedWord, testParty.getPartyDrink());
+  }
+
 }
