@@ -61,12 +61,13 @@ public class PartyTime {
 
     if(mDiscount != "") {
       //setting foodMultiplier to type of Entree
-      if(mDiscount.equals("magician")){
-        cost += 50;
-      } else if (mDiscount.equals("dj")) {
-        cost += 200;
-      } else if (mDiscount.equals("fullBand")) {
-        cost += 500;
+      if(mDiscount.equals("paperAd")){
+        cost -= 50;
+      } else if (mDiscount.equals("onlineAd")) {
+        cost -= 100;
+      } else if (mDiscount.equals("friendDiscount")) {
+        //giving a 20% discount for friends
+        cost -= (cost*.20);
       } else {
         cost += 0;
       }
