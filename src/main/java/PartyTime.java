@@ -7,42 +7,42 @@ public class PartyTime {
 
   //mVaribles
   private String    mTitle = "PartyTest";
-  private Integer   mCost = 0;
-  private Integer   mGuests = 5;
+  private Double    mCost = 0.0;
+  private Double   mGuests = 0.0;
   private String    mFood = "";
   private String    mDrink = "";
   private String    mEntertainment = "";
   private String    mDiscount = "";
 
   //Methods
-  public Integer partyCost() {
-    Integer cost = 0;
-    Integer foodMultiplier = 0;
-    Integer drinkMultiplier = 0;
+  public Double partyCost() {
+    Double cost = 0.0;
+    Double foodMultiplier = 0.0;
+    Double drinkMultiplier = 0.0;
 
     if(mFood != "") {
       //setting foodMultiplier to type of Entree
       if(mFood.equals("fingerfood")){
-        foodMultiplier = 5;
+        foodMultiplier = 5.0;
       } else if (mFood.equals("oneEntree")) {
-        foodMultiplier = 15;
+        foodMultiplier = 15.0;
       } else if (mFood.equals("fullEntree")) {
-        foodMultiplier = 30;
+        foodMultiplier = 30.0;
       } else {
-        foodMultiplier = 0;
+        foodMultiplier = 0.0;
       }
     }
 
     if(mDrink != "") {
       //setting foodMultiplier to type of Entree
       if(mDrink.equals("twoDrinks")){
-        drinkMultiplier = 5;
+        drinkMultiplier = 5.0;
       } else if (mDrink.equals("fourDrinks")) {
-        drinkMultiplier = 15;
+        drinkMultiplier = 15.0;
       } else if (mDrink.equals("openBar")) {
-        drinkMultiplier = 30;
+        drinkMultiplier = 30.0;
       } else {
-        drinkMultiplier = 0;
+        drinkMultiplier = 0.0;
       }
     }
 
@@ -60,6 +60,8 @@ public class PartyTime {
     }
 
     if(mDiscount != "") {
+
+
       //setting foodMultiplier to type of Entree
       if(mDiscount.equals("paperAd")){
         cost -= 50;
@@ -67,7 +69,10 @@ public class PartyTime {
         cost -= 100;
       } else if (mDiscount.equals("friendDiscount")) {
         //giving a 20% discount for friends
-        cost -= (cost*.20);
+        double coupon = 1.0 * cost;
+        double percentage = 0.20;
+        double savings = 0.0;
+        cost -= savings;
       } else {
         cost += 0;
       }
@@ -91,7 +96,7 @@ public class PartyTime {
     return mTitle;
   }
 
-  public int setPartyGuests(int guests){
+  public Double setPartyGuests(Double guests){
     mGuests = guests;
     return mGuests;
   }
@@ -121,7 +126,7 @@ public class PartyTime {
     return mTitle;
   }
 
-  public int getPartyGuests(){
+  public Double getPartyGuests(){
     return mGuests;
   }
 

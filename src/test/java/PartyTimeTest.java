@@ -20,14 +20,14 @@ public class PartyTimeTest {
   @Test
   public void setPartyGuests_NumberofGuests_GuestNumber(){
     PartyTime testParty = new PartyTime();
-    int expectedWord = 30;
-    assertEquals(expectedWord, testParty.setPartyGuests(30));
+    Double expectedWord = 30.0;
+    assertEquals(expectedWord, testParty.setPartyGuests(30.0));
   }
 
   @Test
   public void getPartyGuests_NumberofGuests_GuestNumber(){
     PartyTime testParty = new PartyTime();
-    int expectedWord = 5;
+    Double expectedWord = 0.0;
     assertEquals(expectedWord, testParty.getPartyGuests());
   }
 
@@ -90,7 +90,7 @@ public class PartyTimeTest {
   @Test
   public void PartyCost_Cost_Price(){
     PartyTime testParty = new PartyTime();
-    Integer expectedWord = 25;
+    Double expectedWord = 0.0;
     assertEquals(expectedWord, testParty.partyCost());
   }
 
