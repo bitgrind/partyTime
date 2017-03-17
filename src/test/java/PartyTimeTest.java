@@ -13,8 +13,22 @@ public class PartyTimeTest {
   @Test
   public void getPartyTitle_PartyName_Party(){
     PartyTime testParty = new PartyTime();
-    String expectedWord = "Party";
-    assertEquals(expectedWord, testParty.getPartyTitle("Party"));
+    Boolean expectedWord = null;
+    assertEquals(expectedWord, testParty.getPartyTitle());
   }
+
+  @Test
+  public void setPartyGuests_NumberofGuests_GuestNumber(){
+    PartyTime testParty = new PartyTime();
+    int expectedWord = 30;
+    assertEquals(expectedWord, testParty.setPartyGuests(30));
+  }
+
+  // @Test
+  // public void setPartyGuests_NumberofGuests_GuestNumber(){
+  //   PartyTime testParty = new PartyTime();
+  //   String expectedWord = 30;
+  //   assertEquals(expectedWord, testParty.getPartyGuests(50));
+  // }
 
 }
