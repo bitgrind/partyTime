@@ -28,6 +28,8 @@ public class PartyTime {
         foodMultiplier = 15;
       } else if (mFood.equals("fullEntree")) {
         foodMultiplier = 30;
+      } else {
+        foodMultiplier = 0;
       }
     }
 
@@ -39,6 +41,34 @@ public class PartyTime {
         drinkMultiplier = 15;
       } else if (mDrink.equals("openBar")) {
         drinkMultiplier = 30;
+      } else {
+        drinkMultiplier = 0;
+      }
+    }
+
+    if(mEntertainment != "") {
+      //setting foodMultiplier to type of Entree
+      if(mEntertainment.equals("magician")){
+        cost += 50;
+      } else if (mEntertainment.equals("dj")) {
+        cost += 200;
+      } else if (mEntertainment.equals("fullBand")) {
+        cost += 500;
+      } else {
+        cost += 0;
+      }
+    }
+
+    if(mDiscount != "") {
+      //setting foodMultiplier to type of Entree
+      if(mDiscount.equals("magician")){
+        cost += 50;
+      } else if (mDiscount.equals("dj")) {
+        cost += 200;
+      } else if (mDiscount.equals("fullBand")) {
+        cost += 500;
+      } else {
+        cost += 0;
       }
     }
 
