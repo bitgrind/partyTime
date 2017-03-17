@@ -7,9 +7,12 @@ public class PartyTime {
   private String mTitle;
 
   //SETTERS
-
+  public String setPartyTitle(String title){
+    mTitle = title;
+    return mTitle;
+  }
   //GETTERS
-  public String partyTitle(String title){
+  public String getPartyTitle(String title){
     return title;
   }
 }
